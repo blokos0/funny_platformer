@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://coodcfn4g33ec"]
+
+[ext_resource type="Script" path="res://objects/bouncebutton.gd" id="1_rwrbc"]
+[ext_resource type="Texture2D" uid="uid://drm2knfaumcij" path="res://sprites/bouncebutton.png" id="2_yxjka"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vplai"]
+size = Vector2(22, 22)
+
+[node name="bouncebutton" type="Area2D" groups=["bouncebutton"]]
+z_index = -1
+script = ExtResource("1_rwrbc")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_yxjka")
+hframes = 2
+
+[node name="shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vplai")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

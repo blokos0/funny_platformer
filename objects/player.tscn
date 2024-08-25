@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://35frc7rs0dws"]
+
+[ext_resource type="Script" path="res://objects/player.gd" id="1_710mj"]
+[ext_resource type="Texture2D" uid="uid://dib7vnmgy8bg5" path="res://sprites/playa.png" id="2_v3s7n"]
+[ext_resource type="Texture2D" uid="uid://dj5cmmc67xoh2" path="res://sprites/safetyplatform.png" id="3_txwe6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brg50"]
+size = Vector2(16, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkq31"]
+size = Vector2(32, 8)
+
+[node name="player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_710mj")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_v3s7n")
+metadata/_edit_lock_ = true
+
+[node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_brg50")
+debug_color = Color(0.666667, 0, 1, 0.419608)
+metadata/_edit_lock_ = true
+
+[node name="safetyplatform" type="StaticBody2D" parent="."]
+position = Vector2(0, 28)
+
+[node name="shape" type="CollisionShape2D" parent="safetyplatform"]
+shape = SubResource("RectangleShape2D_gkq31")
+metadata/_edit_lock_ = true
+
+[node name="sprite" type="Sprite2D" parent="safetyplatform"]
+texture = ExtResource("3_txwe6")
+metadata/_edit_lock_ = true
