@@ -17,10 +17,18 @@ func _physics_process(_delta: float) -> void:
 		queue_free() #global.restart()
 	if is_on_wall(): # is_on_wall() only detects collisions if im moving into a wall, which is bad
 		if !Input.is_action_pressed("down"):
-			bounce(bouncepower)
-			if dir == get_wall_normal()[0]:
-				velocity.x += velocityxconserved * -1
-				print("wallbounce! velocity.x mirrored")
+			var colpos: Vector2 = get_last_slide_collision().get_position()
+			var tilepos: Vector2i = get_parent().local_to_map(Vector2(colpos.x - max(get_wall_normal()[0], 0), colpos.y)) # spaghetti
+			var tiledata: TileData = get_parent().get_cell_tile_data(tilepos)
+			var slip: bool = true
+			if tiledata:
+				slip = tiledata.get_custom_data("slippery")
+				print(slip)
+			if !slip:
+				bounce(bouncepower)
+				if dir == get_wall_normal()[0]:
+					velocity.x += velocityxconserved * -1
+					print("wallbounce! velocity.x mirrored")
 	else:
 		bounced = false
 		velocityxconserved = velocity.x

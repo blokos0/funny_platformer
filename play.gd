@@ -44,12 +44,14 @@ func _draw() -> void:
 		tile = 1
 	if Input.is_key_label_pressed(KEY_3):
 		tile = 2
+	if Input.is_key_label_pressed(KEY_4):
+		tile = 3
 	var mp = Vector2i(floor(get_global_mouse_position().x / 32) * 32, floor(get_global_mouse_position().y / 32) * 32)
 	var rect = Rect2(mp.x, mp.y, 32, 32)
 	draw_rect(rect, Color.from_string("#7535FF", Color.REBECCA_PURPLE))
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		if tile == 0:
-			$tilemap.set_cells_terrain_connect([mp / 32], tile, 0)
+		if tile == 0 || tile == 3:
+			$tilemap.set_cells_terrain_connect([mp / 32], 0, tile / 3)
 		else:
 			$tilemap.set_cell(mp / 32, tile, Vector2i(0, 0))
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
