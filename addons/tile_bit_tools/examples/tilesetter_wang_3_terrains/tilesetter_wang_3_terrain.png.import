@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgyynublgnxp5"
-path="res://.godot/imported/tileset_greencorners.png-285bd8768f30752f48f992b17fae10a3.ctex"
+uid="uid://3tn7f0bc7wtl"
+path="res://.godot/imported/tilesetter_wang_3_terrain.png-ccf897dbb6ca5ad03088ec812e1fa06a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tileset_greencorners.png"
-dest_files=["res://.godot/imported/tileset_greencorners.png-285bd8768f30752f48f992b17fae10a3.ctex"]
+source_file="res://addons/tile_bit_tools/examples/tilesetter_wang_3_terrains/tilesetter_wang_3_terrain.png"
+dest_files=["res://.godot/imported/tilesetter_wang_3_terrain.png-ccf897dbb6ca5ad03088ec812e1fa06a.ctex"]
 
 [params]
 

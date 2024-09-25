@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgyynublgnxp5"
-path="res://.godot/imported/tileset_greencorners.png-285bd8768f30752f48f992b17fae10a3.ctex"
+uid="uid://d5ylbtvxy6ud"
+path="res://.godot/imported/godot3_3x3_minimal.png-5315b0ad1f1d21ffddf7293efb5522ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tileset_greencorners.png"
-dest_files=["res://.godot/imported/tileset_greencorners.png-285bd8768f30752f48f992b17fae10a3.ctex"]
+source_file="res://addons/tile_bit_tools/examples/godot3_3x3_minimal/godot3_3x3_minimal.png"
+dest_files=["res://.godot/imported/godot3_3x3_minimal.png-5315b0ad1f1d21ffddf7293efb5522ab.ctex"]
 
 [params]
 
